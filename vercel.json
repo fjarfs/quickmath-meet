@@ -1,0 +1,19 @@
+{
+    "rewrites": [
+      {
+        "source": "/(.*)",
+        "has": [
+          {
+            "type": "header",
+            "key": "referer",
+            "value": "^https://(www\\.)?quickmath\\.id"
+          }
+        ],
+        "destination": "/$1"
+      },
+      {
+        "source": "/(.*)",
+        "destination": "https://meet.quickmath.id"
+      }
+    ]
+  }
